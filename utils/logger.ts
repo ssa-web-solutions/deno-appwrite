@@ -14,12 +14,12 @@ export class Logger {
     }
 
     info(message: string) {
-        this.logger.info(message)
+        this.logger?.info(message)
         this.appwriteLogFn(message)
     }
     
     error(message: string) {
-        this.logger.error(message)
+        this.logger?.error(message)
         this.appwriteErrorFn(message)
     }
 }
